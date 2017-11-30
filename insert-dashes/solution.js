@@ -25,3 +25,9 @@ function DashInsert(num) { //Creates a function with 'num' as the argument
 	}
   return newNum; // return the final string with dashes (if they exist)
 }
+
+
+// The following was copied from Code Wars as the best practice code:
+return num.toString().replace(/[13579](?=[13579])/g, "$&-")
+
+//While this is not my code, I did a decent amount of research as to why this works. The regular expression is looking for matches of 1, 3, 5, 7, and 9 (the g character implies to look through the whole string of numbers). It then adds a '-' between those numbers by using the '$&' pattern to insert the substring dash.
