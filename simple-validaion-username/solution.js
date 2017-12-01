@@ -3,7 +3,7 @@
 // Simple Validation of a Username with Regex
 
 function validateUsr(username) {
-  res =  /^[a-z0-9_]{4,16}$/.test(username); // see comments below
+  res = /^[a-z0-9_]{4,16}$/.test(username); // see comments below
   return res;
 };
 
