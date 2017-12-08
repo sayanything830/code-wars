@@ -12,8 +12,14 @@ function solution(str){ // make a function
   return rev.join(''); // join the array into a string
 }
 
-
-
+// as above, but more simple
+function solution(str){
+  let rev = '';
+  for (let i = str.length -1; i >= 0; i --) {
+    rev += str[i];
+  };
+  return rev;
+}
 
 // with .reverse()
 function solution(str){
