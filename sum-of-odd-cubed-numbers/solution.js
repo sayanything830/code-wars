@@ -1,4 +1,38 @@
 'use strict';
+// Sum of Odd Cubed Numbers
+
+// Added line to not return undefined when 0 is in array
+function cubeOdd(arr) {
+  console.log(arr);
+  for (i in arr) {
+   if (!Number.isInteger(arr[i])) {
+      return undefined;
+    }
+  }
+  let isNumber = function (obj) {
+    return obj!== undefined && typeof(obj) === 'number' && !isNaN(obj);
+  }
+  if (arr.filter(isNumber)) {
+    let odd = (num) => {
+      return num % 2 !== 0;
+      // console.log(num)
+  }
+    let oddArr = arr.filter(odd);
+
+    if (oddArr.length === 0) {
+      return undefined;
+    }
+    console.log(oddArr)
+    let cubed = oddArr.map(x => x * x * x);
+
+    if (cubed.reduce((acc,curr) => acc + curr) === undefined) { // return 0 instead of undefined
+    return 0;
+    }
+
+    return cubed.reduce((acc,curr) => acc + curr);
+  }
+}
+
 
 function cubeOdd(arr) { //make a function
 
